@@ -1,13 +1,71 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
- */
-exports.seed = async function(knex) {
-  // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
-    {id: 1, colName: 'rowValue1'},
-    {id: 2, colName: 'rowValue2'},
-    {id: 3, colName: 'rowValue3'}
-  ]);
-};
+export async function seed(knex) {
+  await knex('words').del()
+
+  await knex('words').insert([
+    { id: 1, connection_id: 1, name: 'rip' },
+    { id: 2, connection_id: 1, name: 'tear' },
+    { id: 3, connection_id: 1, name: 'wrench' },
+    { id: 4, connection_id: 1, name: 'yank' },
+    { id: 5, connection_id: 2, name: 'drill' },
+    { id: 6, connection_id: 2, name: 'exercise' },
+    { id: 7, connection_id: 2, name: 'practice' },
+    { id: 8, connection_id: 2, name: 'routine' },
+    { id: 9, connection_id: 3, name: 'backup' },
+    { id: 10, connection_id: 3, name: 'copy' },
+    { id: 11, connection_id: 3, name: 'extra' },
+    { id: 12, connection_id: 3, name: 'spare' },
+    { id: 13, connection_id: 4, name: 'friar' },
+    { id: 14, connection_id: 4, name: 'monkey' },
+    { id: 15, connection_id: 4, name: 'sundry' },
+    { id: 16, connection_id: 4, name: 'wedding' },
+    { id: 17, connection_id: 5, name: 'floyd' },
+    { id: 18, connection_id: 5, name: 'day' },
+    { id: 19, connection_id: 5, name: 'sabbath' },
+    { id: 20, connection_id: 5, name: 'stripes' },
+    { id: 21, connection_id: 6, name: 'aroma' },
+    { id: 22, connection_id: 6, name: 'bouquet' },
+    { id: 23, connection_id: 6, name: 'fragrance' },
+    { id: 24, connection_id: 6, name: 'scent' },
+    { id: 25, connection_id: 7, name: 'blues' },
+    { id: 26, connection_id: 7, name: 'country' },
+    { id: 27, connection_id: 7, name: 'funk' },
+    { id: 28, connection_id: 7, name: 'soul' },
+    { id: 29, connection_id: 8, name: 'boar' },
+    { id: 30, connection_id: 8, name: 'buck' },
+    { id: 31, connection_id: 8, name: 'bull' },
+    { id: 32, connection_id: 8, name: 'jack' },
+    { id: 33, connection_id: 9, name: 'degrees' },
+    { id: 34, connection_id: 9, name: 'mitre' },
+    { id: 35, connection_id: 9, name: 'square' },
+    { id: 36, connection_id: 9, name: 'percent' },
+    { id: 37, connection_id: 10, name: 'cook' },
+    { id: 38, connection_id: 10, name: 'tasman' },
+    { id: 39, connection_id: 10, name: 'haast' },
+    { id: 40, connection_id: 10, name: 'hicks' },
+    { id: 41, connection_id: 11, name: 'fit' },
+    { id: 42, connection_id: 11, name: 'jim' },
+    { id: 43, connection_id: 11, name: 'pickings' },
+    { id: 44, connection_id: 11, name: 'shady' },
+    { id: 45, connection_id: 12, name: 'bitter' },
+    { id: 46, connection_id: 12, name: 'mad' },
+    { id: 47, connection_id: 12, name: 'heated' },
+    { id: 48, connection_id: 12, name: 'irate' },
+    { id: 49, connection_id: 13, name: 'bait' },
+    { id: 50, connection_id: 13, name: 'lure' },
+    { id: 51, connection_id: 13, name: 'tackle' },
+    { id: 52, connection_id: 13, name: 'cast' },
+    { id: 53, connection_id: 14, name: 'moon' },
+    { id: 54, connection_id: 14, name: 'blood' },
+    { id: 55, connection_id: 14, name: 'murder' },
+    { id: 56, connection_id: 14, name: 'sky' },
+    { id: 57, connection_id: 15, name: 'squirrel' },
+    { id: 58, connection_id: 15, name: 'sponge' },
+    { id: 59, connection_id: 15, name: 'crab' },
+    { id: 60, connection_id: 15, name: 'snail' },
+    { id: 61, connection_id: 16, name: 'ate' },
+    { id: 62, connection_id: 16, name: 'for' },
+    { id: 63, connection_id: 16, name: 'too' },
+    { id: 64, connection_id: 16, name: 'won' }
+  ])
+}
+
