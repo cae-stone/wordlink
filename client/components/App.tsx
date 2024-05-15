@@ -1,5 +1,6 @@
 import { WordModel } from "../../models/word";
 import { useWords } from "../hooks/useWords";
+import DisplayLinks from "./DisplayLinks";
 import WordGrid from "./WordGrid";
 import { useEffect, useState } from 'react'
 
@@ -9,6 +10,8 @@ function App(){
     const [newGame, setNewGame] = useState(false)
     const dummyWordInfo : WordModel[] = [{name: 'test1', desc: 'test1'}, {name: 'test2', desc: 'test2'}]
     const [wordInfo, setWordInfo] = useState(dummyWordInfo)
+    const initialSet: string[] = []
+    const [completedSet, setCompletedSet] = useState(initialSet)
 
     useEffect(() => {
         if(data){
@@ -19,6 +22,7 @@ function App(){
     function handleRefetch(){
         refetch()
         setNewGame(false)
+        setCompletedSet(initialSet)
     }
     
     if (isLoading) {
@@ -32,10 +36,11 @@ function App(){
     if(data){
         if(newGame){
             return (<>
+             <DisplayLinks completedSet={completedSet} />
             <button onClick={() => handleRefetch()}>Play Again</button>
             </>)}
         return(<>
-            <WordGrid data={wordInfo} setData={setWordInfo} newGame={newGame} setNewGame={setNewGame}/>
+            <WordGrid data={wordInfo} setData={setWordInfo} newGame={newGame} setNewGame={setNewGame} completedSet={completedSet} setCompletedSet={setCompletedSet}/>
         </>)
     }
 
