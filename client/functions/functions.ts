@@ -19,11 +19,7 @@ export function reduceWordList(allWords : WordModel[], selectedArr : string[]){
 
 export function checkForMatch(found : WordModel[]) : boolean {
     const result = found.filter((word) => {return word.desc == found[0].desc})
-    if(result.length == 4){
-        return true
-    } else {
-        return false
-    }
+    return result.length == 4
 }
 
 export function filterAllWords(allWords :  WordModel[], selectedArr : string[]) : WordModel[] {

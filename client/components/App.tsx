@@ -36,8 +36,13 @@ function App(){
     if(data){
         if(newGame){
             return (<>
+            <div className="flex justify-center"><p className="text-xl font-bold my-8 py-2">Well Done!</p></div>
+            <div className="flex justify-center">
              <DisplayLinks completedSet={completedSet} />
-            <button onClick={() => handleRefetch()}>Play Again</button>
+             </div>
+             <div className="flex justify-center">
+            <button className="bg-indigo-600 text-white my-8 py-2 px-4 rounded font-bold" onClick={() => handleRefetch()}>Play Again</button>
+            </div>
             </>)}
         return(<>
             <WordGrid data={wordInfo} setData={setWordInfo} newGame={newGame} setNewGame={setNewGame} completedSet={completedSet} setCompletedSet={setCompletedSet}/>

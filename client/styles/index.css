@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.shake {
+    animation: shaking 0.2s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in;
+  }
+
+@keyframes shaking {
+    0% { transform: translateX(0) }
+    20% { transform: translateX(5px) }
+    50% { transform: translateX(0) }
+    75% { transform: translateX(-5px) }
+    100% { transform: translateX(0) }
+  }

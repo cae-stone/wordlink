@@ -26,7 +26,8 @@ function Word(props: {name: string; selectedArr: string[]; setSelectedArr: (newV
             } 
     }
 
-    return <><button className={selected? "bg-blue-800" : "bg-white"} onClick={handleClick}>{props.name}</button></>
+    return <><button className={selected? "bg-slate-900 text-white py-2 px-4 rounded" : "bg-white text-black py-2 px-4 rounded"} onClick={handleClick}>{props.name}</button></>
 }
 
 export default Word
+
