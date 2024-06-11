@@ -18,7 +18,7 @@ function WordGrid(props: {data: WordModel[]; setData: (newValue: WordModel[]) =>
         setAllWords(initialWords)
     }, [data])
 
-    function handleSubmit(event){
+    function handleSubmit(event : React.MouseEvent<HTMLButtonElement>){
         if(selectedArr.length === 4){
             const found = filterAllWords(allWords, selectedArr)
             if(checkForMatch(found)){
@@ -27,7 +27,7 @@ function WordGrid(props: {data: WordModel[]; setData: (newValue: WordModel[]) =>
                 matchDescription(found)
             }
             else {
-                const button = event.target
+                const button = event.currentTarget
                 button.classList.add('shake')
                 button.addEventListener('animationend', () => {
                     button.classList.remove('shake');
@@ -65,7 +65,7 @@ function WordGrid(props: {data: WordModel[]; setData: (newValue: WordModel[]) =>
                 <DisplayLinks completedSet={completedSet}/>
             </div>
             <div className="flex justify-center">
-            <button className="bg-indigo-600 text-white my-8 py-2 px-4 rounded font-bold" onClick={handleSubmit}>
+            <button className="bg-indiblue-300 ease-in-out duration-150 text-white my-8 py-2 px-4 rounded font-bold hover:bg-indiblue-200" onClick={handleSubmit}>
                 SUBMIT
             </button>
             </div>

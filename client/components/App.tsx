@@ -8,10 +8,8 @@ import { useEffect, useState } from 'react'
 function App(){
     const { data, isLoading, isError, refetch } = useWords()
     const [newGame, setNewGame] = useState(false)
-    const dummyWordInfo : WordModel[] = [{name: 'test1', desc: 'test1'}, {name: 'test2', desc: 'test2'}]
-    const [wordInfo, setWordInfo] = useState(dummyWordInfo)
-    const initialSet: string[] = []
-    const [completedSet, setCompletedSet] = useState(initialSet)
+    const [wordInfo, setWordInfo] = useState<WordModel[]>([])
+    const [completedSet, setCompletedSet] = useState<string[]>([])
 
     useEffect(() => {
         if(data){
@@ -22,11 +20,12 @@ function App(){
     function handleRefetch(){
         refetch()
         setNewGame(false)
-        setCompletedSet(initialSet)
+        setCompletedSet([])
     }
     
     if (isLoading) {
-        return <div>Loading...</div>;
+        return <div className="flex flex-col items-center justify-center"><div className="inline-block h-12 w-12 m-4 animate-spin rounded-full border-4 border-solid text-indiblue-300 border-current border-e-transparent align-[-0.125em]"
+        role="status"></div><p>Loading ...</p></div>;
       }
     
     if (isError) {
@@ -41,7 +40,7 @@ function App(){
              <DisplayLinks completedSet={completedSet} />
              </div>
              <div className="flex justify-center">
-            <button className="bg-indigo-600 text-white my-8 py-2 px-4 rounded font-bold" onClick={() => handleRefetch()}>Play Again</button>
+            <button className="bg-slate-800 ease-in-out duration-150 text-white my-8 py-2 px-4 rounded font-bold hover:bg-slate-900" onClick={() => handleRefetch()}>Play Again</button>
             </div>
             </>)}
         return(<>

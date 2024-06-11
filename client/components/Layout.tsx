@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 export default function Layout() {
   return (
     <body className='bg-gray-100 flex flex-col min-h-screen'>
-      <header className="bg-indigo-600 text-white p-2">
+      <header className="bg-indiblue-300 text-white p-2">
       <div className="container mx-auto">
         <h1 className="text-2xl font-bold">WordLink</h1>
       </div>
