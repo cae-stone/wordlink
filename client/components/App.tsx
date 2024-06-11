@@ -35,7 +35,7 @@ function App(){
     if(data){
         if(newGame){
             return (<>
-            <div className="flex justify-center"><p className="text-xl font-bold my-8 py-2">Well Done!</p></div>
+            <div className="flex justify-center"><p className="text-xl font-bold my-8 py-2">{completedSet.length == 4 ? "Well Done!" : "You are out of guesses..." }</p></div>
             <div className="flex justify-center">
              <DisplayLinks completedSet={completedSet} />
              </div>
