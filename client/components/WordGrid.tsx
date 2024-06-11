@@ -9,8 +9,7 @@ function WordGrid(props: {data: WordModel[]; setData: (newValue: WordModel[]) =>
     const { data, completedSet, setCompletedSet } = props
     const initialWords = shuffle(data)
     const [allWords, setAllWords] = useState(initialWords)
-    const initialArr: string[] = []
-    const [selectedArr, setSelectedArr] = useState(initialArr)
+    const [selectedArr, setSelectedArr] = useState<string[]>([])
     const [startAgain, setStartAgain] = useState(false)
 
     useEffect(() => {
