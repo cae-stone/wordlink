@@ -24,23 +24,23 @@ function App(){
     }
     
     if (isLoading) {
-        return <div className="flex flex-col items-center justify-center"><div className="inline-block h-12 w-12 m-4 animate-spin rounded-full border-4 border-solid text-indiblue-300 border-current border-e-transparent align-[-0.125em]"
+        return <div className="flex flex-col items-center justify-center"><div className="h-12 w-12 m-4 animate-spin rounded-full border-4 border-solid text-indiblue-300 border-current border-e-transparent align-[-0.125em]"
         role="status"></div><p>Loading ...</p></div>;
       }
     
     if (isError) {
-        return <div>An error occurred. Please try again later.</div>;
+        return <div className="flex flex-col items-center justify-center">An error occurred. Please try again later.</div>;
     } 
     
     if(data){
         if(newGame){
             return (<>
-            <div className="flex justify-center"><p className="text-xl font-bold my-8 py-2">{completedSet.length == 4 ? "Well Done!" : "You are out of guesses..." }</p></div>
-            <div className="flex justify-center">
+            <div className="flex justify-center"><p className="text-2xl font-bold my-6 py-2">{completedSet.length == 4 ? "Well Done!" : "You are out of guesses..." }</p></div>
+            <div className="flex justify-center mx-16">
              <DisplayLinks completedSet={completedSet} />
              </div>
              <div className="flex justify-center">
-            <button className="bg-slate-800 ease-in-out duration-150 text-white my-8 py-2 px-4 rounded font-bold hover:bg-slate-900" onClick={() => handleRefetch()}>Play Again</button>
+            <button className="bg-slate-800 ease-in-out duration-150 text-white my-6 py-2 px-4 rounded font-bold hover:bg-slate-950" onClick={() => handleRefetch()}>Play Again</button>
             </div>
             </>)}
         return(<>
