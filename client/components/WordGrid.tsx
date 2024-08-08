@@ -66,7 +66,7 @@ function WordGrid(props: {data: WordModel[]; setData: (newValue: WordModel[]) =>
                 selectedArr={selectedArr} setSelectedArr={setSelectedArr} startAgain={startAgain}
                 stop={setStartAgain}/>)}
                 </div>
-                <DisplayLinks completedSet={completedSet}/>
+                {completedSet.length > 0 && <DisplayLinks completedSet={completedSet}/>}
             </div>
             <div className="flex justify-center">
             <button className="bg-indiblue-300 ease-in-out duration-150 text-white py-2 mb-4 px-4 rounded font-bold hover:bg-indiblue-200" onClick={handleSubmit}>

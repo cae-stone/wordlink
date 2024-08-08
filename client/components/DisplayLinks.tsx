@@ -5,7 +5,7 @@ interface DisplayLinksProps {
 
 const DisplayLinks: React.FC<DisplayLinksProps> = ({ completedSet }) => {
     return (
-        <div className="grid grid-cols-1 gap-4 w-full text-center mb-4">
+        <div className="grid grid-cols-1 gap-4 w-full text-center">
             {completedSet.map((item) => 
             <div className="bg-white text-black py-2 px-4 rounded" key={item}>
                 <p>{item}</p>
