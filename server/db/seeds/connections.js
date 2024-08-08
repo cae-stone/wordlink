@@ -17,6 +17,14 @@ export async function seed(knex) {
     { id: 13, name: 'fishing' },
     { id: 14, name: 'blue ___' },
     { id: 15, name: 'spongebob characters' },
-    { id: 16, name: 'number homophones' }
+    { id: 16, name: 'number homophones' },
+    { id: 17, name: 'after___' },
+    { id: 18, name: 'snow___' },
+    { id: 19, name: 'tooth___' },
+    { id: 20, name: 'book___' },
+    { id: 21, name: 'take issue' },
+    { id: 22, name: 'eye __' },
+    { id: 23, name: 'throw' }
   ])
 }
+

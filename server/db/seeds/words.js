@@ -65,7 +65,37 @@ export async function seed(knex) {
     { id: 61, connection_id: 16, name: 'ate' },
     { id: 62, connection_id: 16, name: 'for' },
     { id: 63, connection_id: 16, name: 'too' },
-    { id: 64, connection_id: 16, name: 'won' }
+    { id: 64, connection_id: 16, name: 'won' },
+    { id: 65, connection_id: 17, name: 'math' },
+    { id: 66, connection_id: 17, name: 'glow' },
+    { id: 67, connection_id: 17, name: 'noon' },
+    { id: 68, connection_id: 17, name: 'life' },
+    { id: 69, connection_id: 18, name: 'man' },
+    { id: 70, connection_id: 18, name: 'ball' },
+    { id: 71, connection_id: 18, name: 'flake' },
+    { id: 72, connection_id: 18, name: 'storm' },
+    { id: 73, connection_id: 19, name: 'brush' },
+    { id: 74, connection_id: 19, name: 'paste' },
+    { id: 75, connection_id: 19, name: 'fairy' },
+    { id: 76, connection_id: 19, name: 'ache' },
+    { id: 77, connection_id: 20, name: 'mark' },
+    { id: 78, connection_id: 20, name: 'case' },
+    { id: 79, connection_id: 20, name: 'worm' },
+    { id: 80, connection_id: 20, name: 'store' },
+    { id: 81, connection_id: 21, name: 'disapprove' },
+    { id: 82, connection_id: 21, name: 'mind' },
+    { id: 83, connection_id: 21, name: 'object' },
+    { id: 84, connection_id: 21, name: 'protest' },
+    { id: 85, connection_id: 22, name: 'candy' },
+    { id: 86, connection_id: 22, name: 'contact' },
+    { id: 87, connection_id: 22, name: 'shadow' },
+    { id: 88, connection_id: 22, name: 'witness' },
+    { id: 89, connection_id: 23, name: 'lob' },
+    { id: 90, connection_id: 23, name: 'chuck' },
+    { id: 91, connection_id: 23, name: 'fling' },
+    { id: 92, connection_id: 23, name: 'hurl' },
   ])
 }
+
+
 
